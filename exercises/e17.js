@@ -7,7 +7,11 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
+  let regex = new RegExp(`${value}`);
+  for (let element of array)
+    if(regex.test(element))
+      return true;
+  return false;
 }
 
 

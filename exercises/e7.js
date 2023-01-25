@@ -5,7 +5,14 @@
 
 export function getClientWithLeastBalance(array) {
   // Your code goes here...
-
+  let lowestBalance = Infinity;
+  let lowestBalanceAccount =[];
+  for (let account of array)
+    if(account.balance < lowestBalance && account.balance !== 0){
+      lowestBalance = account.balance;
+      lowestBalanceAccount[0] = account;
+    }
+  return lowestBalanceAccount;
 }
 
 // === TEST YOURSELF ===

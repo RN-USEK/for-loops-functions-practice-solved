@@ -7,10 +7,16 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  let requiredArray = [];
+  for(let element of array) {
+    if (element.length <= 1 )
+        requiredArray.push(element);
+    else 
+        for (let subelement of element)
+         requiredArray.push(subelement)
+  }
+  return requiredArray;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"

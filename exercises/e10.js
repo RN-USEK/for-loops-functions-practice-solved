@@ -5,7 +5,12 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-
+  let clientsWithLetterInName = [];
+  let regex = new RegExp(`${letter}`, "i");
+  for (let account of array)
+    if(regex.test(account.name))
+      clientsWithLetterInName.push(account.name)
+  return clientsWithLetterInName;
 }
 
 // === TEST YOURSELF ===

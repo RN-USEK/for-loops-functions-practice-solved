@@ -5,7 +5,10 @@
 
 export function getFirstTenNumbers() {
   // Your code goes here...
-
+    let firstTen = [];
+    for (let step = 1; step <= 10; step++)
+      firstTen.push(step)
+    return firstTen;
 }
 
 // === TEST YOURSELF ===

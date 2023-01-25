@@ -7,7 +7,11 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  // let regex = new RegExp(`${value}`);
+  let result = [[],[]];
+  for (let element of array)
+    /a/.test(element) ? result[0].push(element) : result[1].push(element);
+  return result;
 }
 
 
