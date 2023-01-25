@@ -8,9 +8,22 @@
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
   // let regex = new RegExp(`${value}`);
-  let result = [[],[]];
-  for (let element of array)
-    /a/.test(element) ? result[0].push(element) : result[1].push(element);
+  // let result = [[],[]];
+  // for (let element of array)
+  //   /a/.test(element) ? result[0].push(element) : result[1].push(element);
+  // return result;
+
+  let result = [[],[]], i=0,element;
+  console.log(element)
+  for (element of array){
+    for (i=0; i < element.length; i++)
+        if (element[i]==="a"){
+            result[0].push(element);
+            break;
+        }
+     if (i=== element.length)
+        result[1].push(element);
+    } 
   return result;
 }
 
